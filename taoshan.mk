@@ -99,10 +99,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/sbin/wait4tad_static:root/sbin/wait4tad_static \
     $(LOCAL_PATH)/rootdir/root/sbin/tad_static:root/sbin/tad_static
 
-# Pre-built Vold
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/system/bin/vold:system/bin/vold
-
 PRODUCT_PACKAGES += \
     charger \
     charger_res_images \
