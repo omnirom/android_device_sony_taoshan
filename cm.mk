@@ -16,9 +16,6 @@
 # Inherit AOSP device config
 $(call inherit-product, device/sony/taoshan/full_taoshan.mk)
 
-# Inherit CM common GSM stuff.
-$(call inherit-product, vendor/cm/config/gsm.mk)
-
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
