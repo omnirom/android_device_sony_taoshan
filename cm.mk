@@ -13,8 +13,8 @@
 # limitations under the License.
 
 
-$(call inherit-product, device/sony/taoshan/taoshan.mk)
-
+# Inherit AOSP device config
+$(call inherit-product, device/sony/taoshan/full_taoshan.mk)
 
 # Inherit CM common GSM stuff.
 $(call inherit-product, vendor/cm/config/gsm.mk)
@@ -31,9 +31,6 @@ TARGET_SCREEN_WIDTH := 480
 # Build fingerprints
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C2105_1275-0241 BUILD_FINGERPRINT=Sony/C2105_1275-0241/C2105:4.2.2/15.3.A.0.26/Android.0031:user/release-keys PRIVATE_BUILD_DESC="C2105-user 4.2.2 JDQ39 Android.0031 test-keys"
 
+# Overrides for CM
 PRODUCT_DEVICE := taoshan
 PRODUCT_NAME := cm_taoshan
-PRODUCT_BRAND := Sony
-PRODUCT_MODEL := Xperia L
-PRODUCT_MANUFACTURER := Sony
-PRODUCT_CHARACTERISTICS := phone

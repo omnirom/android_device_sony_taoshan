@@ -11,9 +11,19 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-for i in eng userdebug user; do
-    add_lunch_combo full_taoshan-${i}
-    add_lunch_combo cm_taoshan-${i}
-done
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit taoshan device
+$(call inherit-product, device/sony/taoshan/taoshan.mk)
+
+# Inherit common Sony resources
+$(call inherit-product, device/sony/common/resources.mk)
+
+# Device identifier
+PRODUCT_DEVICE := taoshan
+PRODUCT_NAME := cm_taoshan
+PRODUCT_BRAND := Sony
+PRODUCT_MODEL := Xperia L
+PRODUCT_MANUFACTURER := Sony
