@@ -23,7 +23,7 @@ $(call inherit-product, device/sony/common/resources.mk)
 
 # Device identifier
 PRODUCT_DEVICE := taoshan
-PRODUCT_NAME := cm_taoshan
+PRODUCT_NAME := full_taoshan
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := Xperia L
 PRODUCT_MANUFACTURER := Sony
