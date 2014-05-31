@@ -205,7 +205,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-sonyericsson
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-PRODUCT_PACKAGES += Torch
+PRODUCT_PACKAGES += OmniTorch
 
 PRODUCT_PACKAGES += libtime_genoff
 

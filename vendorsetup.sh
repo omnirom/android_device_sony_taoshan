@@ -15,5 +15,5 @@
 
 for i in eng userdebug user; do
     add_lunch_combo full_taoshan-${i}
-    add_lunch_combo cm_taoshan-${i}
+    add_lunch_combo omni_taoshan-${i}
 done

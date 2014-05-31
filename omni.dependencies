@@ -1,0 +1,20 @@
+[
+    {
+        "remote": "omnirom",
+        "repository": "android_device_sony_common",
+        "target_path": "device/sony/common",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "omnirom",
+        "repository": "android_device_sony_qcom-common",
+        "target_path": "device/sony/qcom-common",
+        "revision": "android-4.4"
+    },
+    {
+        "remote": "github",
+        "repository": "freexperia/android_kernel_sony_msm8930",
+        "target_path": "kernel/sony/msm8930",
+        "revision": "cm-11.0"
+    }
+]
