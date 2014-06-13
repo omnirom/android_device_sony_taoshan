@@ -14,8 +14,14 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, vendor/sony/taoshan/taoshan-vendor.mk)
-$(call inherit-product, device/sony/qcom-common/qcom-common-adreno.mk)
+$(call inherit-product, device/sony/qcom-common/qcom-common.mk)
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+TARGET_PROVIDES_ADRENO_DRIVER := true
+
+# OpenGL ES 3.0
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=196608
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -146,11 +152,11 @@ PRODUCT_PACKAGES += \
     setup_fs \
     e2fsck
 
-PRODUCT_PACKAGES += \
-    gps.msm8960 \
-    gps.conf \
-    sap.conf \
-    izat.conf
+#PRODUCT_PACKAGES += \
+#    gps.msm8960 \
+#    gps.conf \
+#    sap.conf \
+#    izat.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.transmitpower=true \
@@ -205,4 +211,3 @@ PRODUCT_PACKAGES += libtime_genoff
 # Product attributes
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_CHARACTERISTICS := phone
-
