@@ -12,9 +12,9 @@
         "revision": "android-4.4"
     },
     {
-        "remote": "github",
-        "repository": "freexperia/android_kernel_sony_msm8930",
+        "remote": "omnirom",
+        "repository": "android_kernel_sony_msm8930",
         "target_path": "kernel/sony/msm8930",
-        "revision": "cm-11.0"
+        "revision": "android-4.4"
     }
 ]
