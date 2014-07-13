@@ -12,12 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ROM_BUILDTYPE := Olivier
-
 # Inherit AOSP device config
 $(call inherit-product, device/sony/taoshan/full_taoshan.mk)
 
-# Inherit CM common GSM stuff.
 # Inherit Omni GSM telephony parts
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
