@@ -147,6 +147,9 @@ PRODUCT_PACKAGES += \
     e2fsck
 
 # GPS-1
+PRODUCT_PACKAGES += \
+    gps.msm8960
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf \
