@@ -4,7 +4,7 @@
 
 rild.libargs=-d /dev/smd0
 ro.vendor.extension_library=/system/lib/libqc-opt.so
-ro.sf.lcd_density=240
+ro.sf.lcd_density=182
 ro.com.google.clientidbase=android-sonyericsson
 ro.com.google.clientidbase.ms=android-sonymobile
 
