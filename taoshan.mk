@@ -14,7 +14,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product-if-exists, vendor/sony/taoshan/taoshan-vendor.mk)
-$(call inherit-product, device/sony/qcom-common/qcom-common-2xx.mk)
+$(call inherit-product, device/sony/msm8960-common/msm8960.mk)
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Permissions
