@@ -13,6 +13,12 @@
     },
     {
         "remote": "omnirom",
+        "repository": "android_device_sony_msm8960-common",
+        "target_path": "device/sony/msm8960-common",
+        "revision": "android-5.0"
+    },
+    {
+        "remote": "omnirom",
         "repository": "android_kernel_sony_msm8930",
         "target_path": "kernel/sony/msm8930",
         "revision": "android-4.4"
