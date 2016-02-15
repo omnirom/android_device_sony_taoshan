@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/sony/taoshan/taoshan.mk)
 
 # Inherit common Sony resources
-$(call inherit-product, device/sony/common/resources.mk)
+#$(call inherit-product, device/sony/common/resources.mk)
 
 # Device identifier
 PRODUCT_DEVICE := taoshan

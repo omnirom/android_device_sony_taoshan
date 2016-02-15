@@ -16,6 +16,8 @@
 $(call inherit-product, device/sony/taoshan/full_taoshan.mk)
 
 # Inherit Omni GSM telephony parts
+#$(call inherit-product, device/sony/common/radio.mk)
+
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Inherit from our omni product configuration

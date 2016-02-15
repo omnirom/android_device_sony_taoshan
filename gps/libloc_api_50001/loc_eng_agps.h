@@ -1,4 +1,4 @@
-/* Copyright (c) 2011,2014, Code Aurora Forum. All rights reserved.
+/* Copyright (c) 2011,2012, Code Aurora Forum. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -34,7 +34,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <arpa/inet.h>
-#include <hardware/gps.h>
+#include "gps.h"
 #include <linked_list.h>
 #include <LocApiAdapter.h>
 #include "loc_eng_msg.h"

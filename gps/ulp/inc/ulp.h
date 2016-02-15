@@ -1,4 +1,4 @@
-/* Copyright (c) 2014, Code Aurora Forum. All rights reserved.
+/* Copyright (c) 2011, Code Aurora Forum. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -35,7 +35,7 @@ extern "C"
 {
 #endif
 
-#include <hardware/gps.h>
+#include "gps.h"
 #include "loc_eng.h"
 
 /** Represents the standard ulp module interface. */

@@ -18,6 +18,14 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
+    <bool name="config_cellBroadcastAppLinks">true</bool>
+
+    <!-- Boolean indicating if restoring network selection should be skipped -->
+    <!-- The restoring is handled by modem if it is true-->
+    <bool translatable="false" name="skip_restoring_network_selection">true</bool>
+
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
@@ -51,8 +59,8 @@
     <!-- If this is true, the screen will come on when you plug/unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
-    <!-- If this is true, the IME will be shown at screen on for keyguard password view -->
-    <bool name="kg_show_ime_at_screen_on">false</bool>
+    <!-- If this is true, the IME will be shown at screen on for keyguard password view
+    <bool name="kg_show_ime_at_screen_on">false</bool> -->
 
     <!-- Allow the menu hard key to be disabled in LockScreen on some devices -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
@@ -66,8 +74,9 @@
     <!-- If this is true, the screen will come on when you plug/unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
-    <!-- Default color for notification LED. -->
-    <color name="config_defaultNotificationColor">#ffffffff</color>
+    <!-- Does the notification LED support multiple colors?
+         Used to decide if the user can change the colors -->
+    <bool name="config_multiColorNotificationLed">true</bool>
 
     <!-- Default LED on time for notification LED in milliseconds. -->
     <integer name="config_defaultNotificationLedOn">100</integer>
@@ -75,14 +84,14 @@
     <!-- Default LED off time for notification LED in milliseconds. -->
     <integer name="config_defaultNotificationLedOff">6000</integer>
 
-    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveNotificationLed">true</bool>
-	
-	<!-- Can we change the battery color? -->
+    <!-- Can we change the battery color? -->
     <bool name="config_multiColorBatteryLed">true</bool>
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">true</bool>
+
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true -->
@@ -94,7 +103,10 @@
     <bool name="config_syncstorageengine_masterSyncAutomatically">false</bool>
 
     <!-- Enable the electron beam -->
-    <bool name="config_animateScreenLights">true</bool>
+    <bool name="config_animateScreenLights">false</bool>
+
+    <!-- Remote server that can provide NTP responses. -->
+    <string translatable="false" name="config_ntpServer">ntp.nict.jp</string>
 
     <!-- National language single shift tables to enable for SMS encoding.
          Decoding is always enabled. 3GPP TS 23.038 states that this feature
@@ -155,7 +167,7 @@
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
          should be empty. -->
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
-            <item>"bnep\\d"</item>
+            <item>"bt-pan"</item>
     </string-array>
 
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
@@ -189,21 +201,13 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
+        <item>1</item>
+        <item>2</item>
         <item>5</item>
         <item>10</item>
-        <item>15</item>
-        <item>20</item>
-        <item>30</item>
-        <item>50</item>
-        <item>75</item>
-        <item>100</item>
-        <item>150</item>
-        <item>200</item>
-        <item>300</item>
-        <item>500</item>
-        <item>750</item>
-        <item>1000</item>
-        <item>1022</item>
+        <item>260</item>
+        <item>350</item>
+        <item>355</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -212,42 +216,18 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>10</item>  <!--    0 -    5 -->
-        <item>30</item>  <!--    5 -   10 -->
-        <item>50</item>  <!--   10 -   15 -->
-        <item>65</item>  <!--   15 -   20 -->
-        <item>80</item>  <!--   20 -   30 -->
-        <item>105</item> <!--   30 -   50 -->
-        <item>120</item> <!--   50 -   75 -->
-        <item>135</item> <!--   75 -  100 -->
-        <item>155</item> <!--  100 -  150 -->
-        <item>165</item> <!--  150 -  200 -->
-        <item>185</item> <!--  200 -  300 -->
-        <item>210</item> <!--  300 -  500 -->
-        <item>230</item> <!--  500 -  750 -->
-        <item>240</item> <!--  750 - 1000 -->
-        <item>250</item> <!-- 1000 - 1022 -->
-        <item>255</item> <!-- 1022+ -->
+        <item>34</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>70</item>
+        <item>143</item>
+        <item>191</item>
+        <item>255</item>
     </integer-array>
 
-    <!-- Package name(s) containing location provider support.
-         These packages can contain services implementing location providers,
-         such as the Geocode Provider, Network Location Provider, and
-         Fused Location Provider. They will each be searched for
-         service components implementing these providers.
-         It is strongly recommended that the packages explicitly named
-         below are on the system image, so that they will not map to
-         a 3rd party application.
-         The location framework also has support for installation
-         of new location providers at run-time. The new package does not
-         have to be explicitly listed here, however it must have a signature
-         that matches the signature of at least one package on this list.
-         -->
-    <string-array name="config_locationProviderPackageNames" translatable="false">
-        <!-- The standard AOSP fused location provider -->
-        <item>com.android.location.fused</item>
-        <item>com.google.android.location</item>
-    </string-array>
+    <!-- Timeout to wait for NTP server response. -->
+    <integer name="config_ntpTimeout">8000</integer>
 
     <!-- Safe headphone volume index. When music stream volume is below this index
     the SPL on headphone output is compliant to EN 60950 requirements for portable music
@@ -273,7 +253,17 @@
 
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
     <bool translatable="false" name="config_wifi_background_scan_support">false</bool>
-	
+
+    <!-- Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">4</integer>
+
+    <!-- Whether UI for multi user should be shown -->
+    <bool name="config_enableMultiUserUI">true</bool>
+
+    <!-- Performance profiles
+    <string name="config_perf_profile_prop">sys.perf.profile</string>
+    <string name="config_perf_profile_default_entry">1</string> -->
+
     <!-- Hardware 'face' keys present on the device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
          of the following keys present:
@@ -283,10 +273,14 @@
              8 - Assistant (search)
             16 - App switch
             32 - Camera
+            64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareKeys">32</integer>
+    <integer name="config_deviceHardwareKeys">96</integer>
 
-    <!-- Disable lockscreen translucent decor by default -->
-    <bool name="config_enableLockScreenTranslucentDecor">true</bool>
+    <!-- The RadioAccessFamilies supported by the device.
+         Empty is viewed as "all".  Only used on devices which
+         don't support RIL_REQUEST_GET_RADIO_CAPABILITY
+         format is UMTS|LTE|... -->
+    <string translatable="false" name="config_radio_access_family">GSM|WCDMA</string>
 </resources>

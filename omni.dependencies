@@ -3,24 +3,78 @@
         "remote": "omnirom",
         "repository": "android_device_sony_common",
         "target_path": "device/sony/common",
-        "revision": "android-4.4"
+        "revision": "android-6.0"
     },
     {
         "remote": "omnirom",
         "repository": "android_device_sony_qcom-common",
         "target_path": "device/sony/qcom-common",
-        "revision": "android-4.4"
+        "revision": "android-6.0"
     },
-    {
-        "remote": "omnirom",
-        "repository": "android_device_sony_msm8960-common",
-        "target_path": "device/sony/msm8960-common",
-        "revision": "android-5.0"
-    },
-    {
-        "remote": "omnirom",
-        "repository": "android_kernel_sony_msm8930",
+   {
+        "remote": "github",
+        "repository": "CyanogenMod/android_kernel_sony_msm8930",
         "target_path": "kernel/sony/msm8930",
-        "revision": "android-4.4"
-    }
+        "revision": "cm-13.0"
+  },
+  {
+  	    "remote": "github",
+        "repository": "CyanogenMod/android_hardware_qcom_display",
+        "target_path": "hardware/qcom/display-caf/msm8960",
+        "revision": "cm-13.0-caf-8960"
+  },
+  {
+        "remote": "github",
+        "repository": "CyanogenMod/android_hardware_qcom_media",
+        "target_path": "hardware/qcom/media-caf/msm8960",
+        "revision": "cm-13.0-caf-8960"
+  },
+  {
+        "remote": "github",
+        "repository": "CyanogenMod/android_hardware_qcom_audio",
+        "target_path": "hardware/qcom/audio-caf/msm8960",
+        "revision": "cm-13.0-caf-8960"
+  },
+  {
+        "remote": "github",
+        "repository": "CyanogenMod/android_device_qcom_sepolicy",
+        "target_path": "device/qcom/sepolicy",
+        "revision": "cm-13.0"
+  },
+  {
+        "remote": "omnirom",
+        "repository": "android_frameworks_av",
+        "target_path": "frameworks/av-caf",
+        "revision": "android-6.0-caf"
+  },
+  {
+        "remote": "omnirom",
+        "repository": "android_frameworks_native",
+        "target_path": "frameworks/native-caf",
+        "revision": "android-6.0-caf"
+  },
+  {
+        "remote": "omnirom",
+        "repository": "android_external_stlport",
+        "target_path": "external/stlport",
+        "revision": "android-6.0"
+  },
+  {
+        "remote": "omnirom",
+        "repository": "android_hardware_sony_boringssl-compat",
+        "target_path": "hardware/sony/boringssl-compat",
+        "revision": "android-6.0"
+  },
+  {
+        "remote": "github",
+        "repository": "CyanogenMod/android_hardware_ril",
+        "target_path": "hardware/ril-caf",
+        "revision": "cm-13.0-caf"
+  },
+  {
+        "remote": "omnirom",
+        "repository": "vendor_qcom_opensource_display-frameworks",
+        "target_path": "vendor/qcom/opensource/display-frameworks",
+        "revision": "android-6.0"
+  }
 ]

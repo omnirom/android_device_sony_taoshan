@@ -1,4 +1,4 @@
-/* Copyright (c) 2011 - 2014, Code Aurora Forum. All rights reserved.
+/* Copyright (c) 2011 - 2012, Code Aurora Forum. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -30,7 +30,7 @@
 #define LOG_NDDEBUG 0
 #define LOG_TAG "LocSvc_afw"
 
-#include <hardware/gps.h>
+#include "gps.h"
 #include <dlfcn.h>
 #include <loc_eng.h>
 #include <loc_log.h>

@@ -1,4 +1,4 @@
-/* Copyright (c) 2014 Code Aurora Forum. All rights reserved.
+/* Copyright (c) 2011 Code Aurora Forum. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -36,7 +36,7 @@ extern "C"
 #endif
 
 #include <ctype.h>
-#include <hardware/gps.h>
+#include "gps.h"
 #include <loc.h>
 
 const char* loc_get_gps_status_name(GpsStatusValue gps_status);
